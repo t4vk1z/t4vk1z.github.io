@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans'); /* Importa la familia de fonts de Google des de l'URL de l'API*/
+
+
+/* Estils generals del lloc web */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial;
+  font-size: 18px;
+  background-color: #5e42a6;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+
+/* Estils dels continguts de les pàgines */
+
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background-color: #f1f1f1;
+  padding: 10px;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+p {
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  color: black;
+  font-weight: normal;
+  margin-top: 20px;
+}
+
+section {
+  display: -webkit-flex;
+  display: block;
+}
+
+h1 {
+	font-size: 25px
+}
+
+a {
+	position: relative;
+	color: black;
+	text-decoration: none;
+	-webkit-text-stroke: 1px white;
+	font-weight: bold;
+}
+
+img {
+  text-align: center;
+}
+
+
+/* Estils dels peus de pàgina */
+
+footer {
+  background-color: #5e42a6;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  height: 95px;
+}
+
+.imatge-footer {
+  height: 4.56em;
+  padding-right: 8em;
+  padding-left: 8em;
+}
+
+
+/* Estils de la galeria d'imatges */
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+  height: auto;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  padding: 4% 2%;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.box {
+  flex: 1;
+  overflow: hidden;
+  transition: .5s;
+  margin: 0 2%;
+  box-shadow: 0 20px 30px rgba(0,0,0,.1);
+  line-height: 0;
+}
+
+.box > img {
+  width: 200%;
+  height: calc(100% - 10vh);
+  object-fit: cover; 
+  transition: .5s;
+}
+
+.box > span {
+  font-size: 3.4vh;
+  display: block;
+  text-align: center;
+  height: 10vh;
+  line-height: 2.6;
+}
+
+.box:hover { flex: 1 1 50%; }
+.box:hover > img {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Estils de la capçalera */
+header {
+  background-color: #5e42a6;
+  background-image: url(skylane.png);
+  background-size:cover;
+  background-repeat: no-repeat;
+  padding: 15px;
+  text-align: center;
+  font-size: 54px;
+  color: white;
+  text-transform: uppercase;
+  -webkit-text-stroke: 2px #5e42a6;
+  font-weight: bolder;
+}
+
+
+/* Estils del menú de navegació */
+
+aside {
+  background-color: black;
+}
+
+nav {
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+
+/* Estils dels items del menú de navegació */
+
+nav ul li {
+	text-transform: uppercase;
+	font-size: 19px;
+	font-family: Arial;
+	background-color: white;
+	border: 2px solid #5e42a6;
+	letter-spacing: 0.1em;
+	width: 14.25em;
+	height: 1.7em;
+	line-height: 1.5em;
+	position: relative;
+	overflow: hidden;
+	margin: 1em;
+	cursor: pointer;
+	text-align: center;
+	border-radius: 15px;
+  font-weight: bold;
+  display: inline-table;
+}
+
+nav ul li::before {
+	content: '';
+	position: absolute;
+	width: 1.8em;
+	height: inherit;
+	background-color: black;
+	border-radius: 50%;
+	color: white;
+	top: 0;
+	left: -0.75em;
+	transition: 0.5s ease-out;
+  font-weight: bold;
+}
+
+nav ul li:hover::before {
+	transform: scale(16);
+	color: white;
+}
+
+.active {
+  background-color: #000000;
+}
+
+
+/* Estils del formulari */
+
+form {
+  text-align: center;
+  margin: 0 auto;
+  align-items: center;
+}
+
+input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #5e42a6;
+  border-radius: 4px;
+  text-align: center;
+}
+
+input[type=email] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #5e42a6;
+  border-radius: 4px;
+  text-align: center;
+}
+
+textarea {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #5e42a6;
+  border-radius: 4px;
+  text-align: center;
+}
+
+fieldset {
+  width: 97%;
+  text-align: center;
+  padding: 1.5em;
+  margin: 1.5em;
+}
+
+legend {
+  font-weight: bold;
+}
+
+button {
+  width: 45%;
+  background-color: #5e42a6;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  padding-bottom: 1em;
+  margin-bottom: 2em;
+}
+
+#send:hover {
+  background-color: #45a049;
+}
+
+#reset:hover {
+  background-color: #ff0000;
+}
+
+label {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Estils de la taula de la pàgina principal */
+
+table {
+  border: solid transparent 5px;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+table img {
+  width: 35%;
+  text-align: center;
+}
+
+th {
+  text-align: center;
+  margin: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+
+/* Estils específics per diverses casuïstiques*/
+
+.white {
+  color: white;
+}
+
+.gracies {
+  background-color: #5e42a6;
+  text-align: center;
+  color: white;
+}
+
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding-top: 5em;
+  padding-bottom: 1.5em;
+  height: auto;
+}
+
+
+/* Estils de mides variables relatives al tamany del visor (RESPONSIVE) */
+
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+
+  nav ul li {
+    width: 40%;
+    display: inline-block;
+    margin: 0.25em;
+  }
+
+  nav ul li a {
+    font-size: 75%;
+  }
+}

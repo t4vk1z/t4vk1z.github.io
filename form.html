@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/styles.css">
+		<title>by Pau</title>
+	</head>
+	<body>
+		<header>
+  			<h2>Barcelona</h2>
+		</header>
+		<section>
+		<aside>
+  			<nav>
+   			<ul>
+      			<li><a href="index.html">Main info</a></li>
+      			<li><a href="places.html">Hot spots</a></li>
+      			<li><a href="food.html">Where to eat</a></li>
+      			<li><a href="gallery.html">Photo gallery</a></li>
+      			<li class="active"><a href="form.html">Contact with us</a></li>
+    			</ul>
+  			</nav>
+  		</aside>
+  		<article>
+    		<h1>FORM</h1>
+		<form name="formulari" action="gracies.html">
+			<fieldset>
+				<legend>Dades del client</legend>
+				<label for="fname_lname">Nom i cognoms:</label>
+				<br>
+ 	 			<input type="text" id="fname_lname" title="Escriu el teu nom i cognom" placeholder="Escriu el teu nom i cognom">
+ 	 			<br>
+ 	 			<label for="nif_num">NIF:</label>
+ 	 			<br>
+  				<input type="text" id="nif_num" pattern="[0-9]{8}" placeholder="Vuit números">
+  				<input type="text" id="nif_letr" pattern="[A-Z]{1}" size="1" placeholder="Una lletra">
+  				<br>
+  				<label for="email">Correu electrònic:</label>
+  				<br>
+  				<input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="nom@domini.dom">
+  				<br>
+			</fieldset>
+			<fieldset>
+				<legend>Digue'ns en que et podem ajudar</legend>
+				<br>
+				<textarea id="text" rows="10" cols="50"></textarea>
+			</fieldset>
+  				<button id="send" type="submit" onclick="validarForm()">Enviar formulari</button>
+  				<button id="reset" type="reset">Esborrar formulari</button>
+		</form>
+ 		</article>
+		</section>
+		<footer>
+			<img class="imatge-footer" src="images/escut-bcn.png" alt="Escut de la ciutat de Barcelona">
+			<img class="imatge-footer" src="images/panot-1.png" alt="Icona del Panot">
+			<img class="imatge-footer" src="images/senyera.jpg" alt="Bandera nacional de Catalunya">
+		</footer>
+	</body>
+</html>
