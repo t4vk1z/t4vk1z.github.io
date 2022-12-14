@@ -192,7 +192,7 @@ nav ul li {
 	text-align: center;
 	border-radius: 15px;
   font-weight: bold;
-  display: inline-table;
+  display: inline-block;
 }
 
 nav ul li::before {
